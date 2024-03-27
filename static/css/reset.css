@@ -1,0 +1,95 @@
+body{
+    background-image: url("/static/img/绮凝盏.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.text-center {
+    position: relative;
+    top: 20px;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Microsoft Yahei";
+    color: #cb9305;
+    margin: 20px;
+}
+
+.reset button {
+    display: block;
+    margin: 20px auto;
+    margin-top: 5px;
+}
+
+.reset input {
+    display: block;
+    margin: 20px auto;
+}
+
+.reset {
+    width: 500px;
+    height: 350px;
+    margin: 100px auto;
+    margin-bottom: 0px;
+    background-color: rgba(240, 222, 157, 0.537);
+} 
+
+.wrapper{
+	width: 345px;
+    margin: 100px auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    background-color: rgba(240, 222, 157, 0.537);
+}
+
+.inputBox{
+	position: relative;
+}
+.inputBox input{
+	display: inline-block;
+	width: 300px;
+	outline: none;
+	padding: 5px;
+    margin-bottom: 5px;
+	border-radius: 5px;
+	box-sizing: border-box;
+}
+/*错误提示*/
+.error{
+	color: red;
+	margin-top: 10px;
+	font-size: 12px;
+	display: none;
+}
+/*图片框*/
+.canvasbox{
+	position: relative;
+	margin-top:5px ;
+}
+/*画布*/
+.canvasbox .imgbox{
+	width: 120px;
+	height: 40px;
+	border-radius:5px;
+    margin-bottom: 0;
+}
+
+.canvasbox canvas{
+    margin-left: 105px;;
+}
+
+.canvasbox a{
+    margin-left: 120px;
+}
+
+.submit{
+	padding: 5px 20px;
+	border: 0;
+	background-color: #cb9305;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 5px;
+	cursor: pointer;
+	/*把鼠标指针的形状弄成一只伸出食指的手*/
+}

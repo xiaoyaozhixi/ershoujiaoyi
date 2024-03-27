@@ -1,0 +1,36 @@
+body{
+    background-image: url("/static/img/绮云泽.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: cover;
+}
+
+.text-center {
+    position: relative;
+    top: 20px;
+    left: 200px;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Microsoft Yahei";
+    color: #d609f1;
+    margin-bottom: 20px;
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+.register button {
+    display: block;
+    margin: 20px auto;
+}
+
+.register input {
+    display: block;
+    margin: 20px auto;
+}
+
+.register {
+    width: 500px;
+    height: 390px;
+    margin: 100px auto;
+    background-color: rgba(212, 134, 201, 0.537);
+} 

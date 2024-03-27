@@ -1,0 +1,29 @@
+/* --------------------------list_body-----------------------*/
+.list_body p:first-child {
+    font-family: "Microsoft Yahei";
+    font-size: 24px;
+    color: #504A4D;
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+.list_body img {
+    margin-left: 30px;
+    float: left;
+    margin-right: 50px;
+}
+
+.list_body button {
+    margin-left: 355px;
+}
+
+.list_body p {
+    font-family: "Microsoft Yahei";
+    font-size: 20px;
+    color: #504A4D;
+    font-weight: 550;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+

@@ -1,0 +1,172 @@
+body,ul,ol,p,h1,h2,h3,h4,h5,h6,dl,dd,select,input,textarea,form{
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size:100%;
+    font-weight:normal;
+}
+
+/* 去掉列表默认的图标 */
+ul,ol{list-style:none;}
+/* 去掉em默认的斜体 */
+em{
+    font-style: normal;
+}
+/* 去掉a标签默认的下划线 */
+a{
+    text-decoration:none;
+}
+/* 去掉加链接时产生的框线 */
+img{
+    border:0;
+}
+/* 清除浮动 */
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+
+.clearfix{
+    zoom:1
+}
+
+.address {
+    width:1200px;
+    margin:20px auto 0;
+    font-size:20px;
+}
+
+.common_title{
+    width:1200px;
+    margin:20px auto 0;
+    font-size:20px;
+}
+.common_list_con{
+    width:1200px;
+    border:1px solid #dddddd;
+    border-top:2px solid #66ccff;
+    margin:10px auto 0;
+    background-color:rgba(197, 242, 243, 0.7);;
+    position:relative;
+}
+
+.common_list_con dl{
+    margin:20px;
+}
+
+.common_list_con dt{
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.common_list_con dd input{
+    vertical-align:bottom;
+    margin-right:10px;
+}
+
+.goods_list_th{
+    height:40px;
+    border-bottom:1px solid #ccc;
+}
+
+.goods_list_th li{
+    float:left;
+    line-height:40px;
+    text-align:center;
+}
+
+.goods_list_th .col01{
+    width:25%;
+}
+
+.goods_list_th .col02{
+    width:20%;
+}
+
+.goods_list_th .col03{
+    width:25%;
+}
+
+.goods_list_th .col04{
+    width:15%;
+}
+
+.goods_list_th .col05{
+    width:15%;
+}
+
+.goods_list_td{
+    height:80px;
+    border-bottom:1px solid #eeeded;
+    background-color:rgb(230, 250, 242, 0.7);
+}
+
+.goods_list_td li{
+    float:left;
+    line-height:80px;
+    text-align:center;
+}
+
+.goods_list_td .col01{
+    width:4%;
+}
+
+.goods_list_td .col02{
+    width:6%;
+}
+
+.goods_list_td .col03{
+    width:15%;
+}
+
+.goods_list_td .col04{
+    width:20%;
+}
+
+.goods_list_td .col05{
+    width:25%;
+}
+
+.goods_list_td .col06{
+    width:15%;
+}
+
+.goods_list_td .col02{
+    text-align:right;
+}
+
+.goods_list_td .col02 img{
+    width:63px;
+    height:63px;
+    border:1px solid #ddd;
+    display:block;
+    margin:7px 0;
+    float:right;
+}
+.goods_list_td .col03{
+    text-align:left;
+    text-indent:20px;
+}
+
+.order_submit{
+    width:1200px;
+    margin:20px auto;
+}
+.order_submit a{
+    width:160px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    background-color:#66ccff;
+    color:#fff;
+    font-size:16px;
+    display:block;
+    float:right
+}

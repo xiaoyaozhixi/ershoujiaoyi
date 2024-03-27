@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索结果</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/search_result.css">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+</head>
+<body>
+    <div class="main_head">
+            <P>欢迎您，{{ request.session.username }}</P>
+            <button type="button" class="btn btn-default"><a href="/logout/" >退出</a></button>
+        <div class="main">
+            <a class="btn btn-link"  href="/user_center/" >| 用户中心</a>
+        </div>
+        <div class="main">
+            <a class="btn btn-link"  href="/shop/main/" >首页</a>
+        </div>
+    </div>
+    <div class="title">
+        <div class="second_title">
+            <div class="find">
+                <input type="text" class="form-control" id="search" >
+                <a type="button" class="btn btn-warning" id="search-button" href="javascript:void(0);" onclick="go_search()">
+                    <span class="glyphicon glyphicon-search"></span>
+                </a>
+                <button type="button" class="btn btn-warning"><a href="/shop/release_goods/">发布商品</a></button>
+            </div>
+        </div>    
+    </div>
+    <div class="top">
+        <a href="#"><img src="/static/img/top.png"></a>
+    </div>
+    <div class="search_main">
+        <p>搜索：{{ search_title }}</p>
+        {%if count == 0 %}
+            <p>抱歉，没有找到相关商品</p>
+        {%else%}
+            <div class="pic">
+            {% for goods in search_goods %}
+            <div class="pic_in">
+                <img src="/static/{{ goods.picture }}"/>
+                <a href="/shop/details/{{ goods.id }}/">{{ goods.title }}</a>
+            </div>
+             {% endfor %}
+        </div>
+        {%endif%}
+        <hr>
+        <button class="l_btn btn btn-default">上一页</button>
+        <button class="r_btn btn btn-default">下一页</button>
+    </div>
+
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/search.js"></script>
+</body>
+</html>

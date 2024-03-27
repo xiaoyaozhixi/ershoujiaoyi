@@ -1,0 +1,54 @@
+body{
+    background-image: url("/static/img/丛林法则.jpeg");
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: cover;
+}
+
+.log_in {
+    width: 500px;
+    height: 400px;
+    margin: 100px auto;
+    background-color: rgba(240, 255, 255, 0.7);
+}
+
+.text-center {
+    position: relative;
+    top: 20px;
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Microsoft Yahei";
+    color: #167f06;
+    margin-bottom: 20px;
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+.log_in input {
+    display: block;
+    margin: 40px auto;
+}
+
+.log_in button {
+    display: block;
+    margin: 20px auto;
+}
+
+.log_in a {
+    color: rgb(8, 0, 255);
+    margin-left: 200px;
+    justify-content: center;
+}
+
+.code input {
+    display: inline;
+    width: 80px;
+    margin-left: 160px;
+    position: relative;
+    top: -10px;
+}
+
+.user_error{float:left;height:10px;line-height:10px;margin-top:-15px;margin-left:160px;color:#e62e2e;}
+
+
+.pwd_error{float:left;height:10px;line-height:10px;margin-top:-15px;margin-left:160px;color:#e62e2e;display:none;}

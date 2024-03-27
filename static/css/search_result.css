@@ -1,0 +1,53 @@
+.search_main>p{
+    font-size: 24px;
+    font-weight: 800px;
+    font-family: "Microsoft Yahei";
+    color: #504A4D;
+    margin-bottom: 20px;
+    margin: 20px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #504A4D;
+}
+
+.search_main {
+    margin-left: 10%;
+    width: 1200px;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    border: 2px solid #6a6cee;
+    box-shadow: 0px 5px 5px #f2f6f8;
+    background-color: rgba(197, 242, 243, 0.7);
+}
+
+.pic {
+    width: 1100px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.pic_in {
+    float: left;
+    margin: 25px;
+}
+
+.pic_in img{
+    margin-left: 400px;
+    height: 400px; 
+    width: 300px;
+}
+
+.pic_in a {
+    display: block;
+    margin-top: 5px;
+    margin-left: 500px;
+    font-size: 20px;
+}
+
+.l_btn {
+    margin-left: 70px;
+}
+
+.r_btn {
+    margin-left: 900px;
+}

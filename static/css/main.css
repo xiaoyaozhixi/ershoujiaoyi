@@ -1,0 +1,368 @@
+body{
+    background-image: url("/static/img/GINKA1.png");
+    background-repeat: no-repeat;
+    background-position: center 0%;
+    background-size: 1300px 731px;
+    background-attachment: fixed;
+}
+
+.main {
+    float: right;
+    background-color: rgba(197, 242, 243, 0.7);
+}
+
+.main_head {
+    margin:0 10%;
+    width: 1200px;
+}
+
+.main_head p {
+    position: relative;
+    left: 50px;
+    display: inline;
+    margin-right: 150px;
+    background-color: rgba(197, 242, 243, 0.7);
+}
+
+/* ----------------------modal---------------------- */
+.modal-body>input {
+    display: block;
+    margin: 15px auto;
+}
+
+.vcode {
+    width: 80px;
+}
+
+/* ------------------------title------------------- */
+.title {
+    width: 1600px;
+    height: 100px;
+    background-color: rgba(197, 242, 243, 0.7);
+    overflow: hidden;
+}
+
+.title a {
+    display: inline-block;
+    color: #000;
+    line-height: 35px;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 4px 20px;
+    text-decoration: none;
+}
+
+.title a.active {
+    border-bottom: 4px solid #000;
+}
+
+.second_title {
+    float: right;
+    width: 1100px;
+    height: 100px;
+    overflow: hidden;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* ---------------------find--------------------- */
+.find {
+    width: 640px;
+    height: 80px;
+}
+
+.find input {
+    width: 400px;
+    margin: 0 auto;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.find button {
+    display: inline-block;
+    width: 100px;
+    height: 35px;
+}
+
+.find>a {
+    width: 60px;
+    height: 35px;
+}
+
+.find span {
+    position: relative;
+    top: -4px;
+}
+
+
+.find>button>a {
+    color: white;
+    position: relative;
+    top: -10px;
+    left: -12px;
+}
+
+.top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 7%;
+    top:90%;
+    border-radius: 5px;
+    border: 2px solid #6a6cee;
+    box-shadow: 0px 5px 5px #f2f6f8;
+    background-color: rgba(197, 242, 243, 0.7);
+}
+
+.top img {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 15px 14px;
+}
+
+.new_shop {
+    width: 1300px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: rgba(197, 242, 243, 0.7);
+    margin-left: 10%;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    padding-left: 20px;
+}
+
+.new_shop_in img {
+    width: 70px;
+    height: 40px;
+    display: inline-block;
+}
+
+.new_shop_in a {
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    font-size: large;
+}
+
+.new_shop_in {
+    float: left;
+    margin: 20px 30px 0 30px;
+}
+
+.nav_shop_img {
+    margin: 0 10%;
+    width: 1200px;
+    height: 330px;
+}
+
+.shop {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin: 15px 0;
+}
+
+.shop img {
+    width: 25px;
+    height: 25px;
+}
+
+.shop span {
+    margin-left: 20px;
+}
+
+.shop span a {
+    color: #979797;
+    font-size: 12px;
+    margin: 3px;
+}
+
+.shop span a:hover {
+    color: #9dc91c;
+}
+
+/* ----------------main_content--------------- */
+.main_content {
+    margin: 0 10%;
+}
+
+.second_content_left {
+    width: 1200px;
+    /*height: 400px;*/
+    overflow: hidden;
+    background-color: rgba(197, 242, 243, 0.7);
+}
+
+.second_content_left img {
+    width: 70px;
+    height: 40px;
+}
+
+.second_content_left a {
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    font-family: "Microsoft Yahei";
+    font-size: 20px;
+    color: #504A4D;
+}
+
+.second_content_left .more_goods {
+    float: right;
+    margin-top: 5px;
+}
+
+.second_content_right .more_goods {
+    position: relative;
+    left: 20px;
+    top: 8px;
+}
+
+.third_content {
+    border-top: 2px solid #e4ecf3;
+    /*height: 235px;*/
+    width: 1200px;
+    padding: 20px;
+    margin-left: 26px;
+}
+
+.second_content_right {
+    width: 1200px;
+    background-color: rgba(197, 242, 243, 0.7);
+    height: 400px;
+     overflow: hidden;
+}
+
+.second_content_right img {
+    width: 80px;
+    height: 40px;
+    position: relative;
+    left: 1120px;
+}
+
+.second_content_right a {
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    font-family: "Microsoft Yahei";
+    font-size: 20px;
+    position: relative;
+    left: 980px;
+    color: #504A4D;
+}
+
+.main_content .goods {
+    width: 250px;
+    height: 300px;
+    border: 2px solid #e4ecf3;
+    box-shadow: 1px 2px 3px #f2f6f8;
+    border-radius: 5px;
+    float: left;
+}
+
+.main_content .goods img {
+    width: 220px;
+    height: 260px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.main_content .describe img {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+.main_content .describe a {
+    font-family: "Microsoft Yahei";
+    font-size: 16px;
+    color: #504A4D;
+    cursor:pointer;
+    display: block;
+    font-weight: 550;
+    margin-left: 15px;
+}
+
+.main_content .describe .rmb {
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.main_content .describe span {
+    color: rgb(244, 60, 60);
+    font-weight: 900; 
+    position: relative;
+    top: 11px;
+}
+.second_content_right .goods {
+    float: left;
+}
+
+.second_content_right .goods img {
+    position: relative;
+    left: 0;
+}
+
+.second_content_right .describe img {
+    position: relative;
+    left: 0;
+}
+
+.second_content_right .describe a {
+    position: relative;
+    left: 0;
+}
+
+
+
+.describe {
+    width: 180px;
+    height: 270px;
+    float: left;
+}
+
+.describe img {
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+.describe a {
+    font-family: "Microsoft Yahei";
+    font-size: 16px;
+    color: #504A4D;
+    cursor:pointer;
+    display: block;
+    margin-left: 15px;
+    font-weight: 550;
+}
+
+.describe .rmb {
+    margin-left: 60px;
+}
+
+.describe span {
+    color: #fc0;
+    font-weight: 900;
+}
+
+.describe p {
+    text-indent: 30px;
+    margin: 15px;
+    overflow:hidden; 
+    /* 超出的文本隐藏 */
+    text-overflow:ellipsis;
+    /* 溢出用省略号显示 */
+    display:-webkit-box; 
+    /* 将对象作为弹性伸缩盒子模型显示。 */
+    -webkit-box-orient:vertical;
+    /* 从上到下垂直排列子元素 */
+    -webkit-line-clamp:7;
+    /* 表示显示的行数。 */
+}
+
+
+
+.error_tip{float:left;height:10px;line-height:10px;margin-top:-15px;margin-left:160px;color:#e62e2e;display:none;}

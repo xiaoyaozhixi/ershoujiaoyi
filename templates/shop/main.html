@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>二手市场</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+</head>
+<body>
+    <div class="main_head">
+            <P>欢迎您，{{ request.session.username }}</P>
+            <button type="button" class="btn btn-default"><a href="/logout/">退出</a></button>
+        <div class="main">
+            <a class="btn btn-link"  href="/user_center/" >| 用户中心</a>
+        </div>
+        <div class="main">
+            <a class="btn btn-link"  href="/shop/main/" >首页</a>
+        </div>
+    </div>
+    <div class="title">
+        <div class="second_title">
+            <div class="find">
+                <input type="text" class="form-control" id="search" >
+                <a type="button" class="btn btn-warning" id="search-button" href="javascript:void(0);" onclick="go_search()">
+                    <span class="glyphicon glyphicon-search"></span>
+                </a>
+                <button type="button" class="btn btn-warning"><a href="/shop/release_goods/">发布商品</a></button>
+            </div>
+        </div>    
+    </div>
+    <div class="top">
+        <a href="#"><img src="/static/img/top.png"></a>
+    </div>
+    <div class="new_shop">
+        <div class="new_shop_in">
+            <img src="/static/img/书籍.png"/>
+            <a class="btn btn-link" href="#f1">闲置书籍</a>
+        </div>
+        <div class="new_shop_in">
+            <img src="/static/img/服装.png"/>
+            <a class="btn btn-link" href="#f2">服装</a>
+        </div>
+        <div class="new_shop_in">
+            <img src="/static/img/数码.png"/>
+            <a class="btn btn-link" href="#f3">电子数码</a>
+        </div>
+        <div class="new_shop_in">
+            <img src="/static/img/游戏.png"/>
+            <a class="btn btn-link" href="#f4">游戏</a>
+        </div>
+        <div class="new_shop_in">
+            <img src="/static/img/日用百货.png"/>
+            <a class="btn btn-link" href="#f5">日用百货</a>
+        </div>
+        <div class="new_shop_in">
+            <img src="/static/img/其它.png"/>
+            <a class="btn btn-link" href="#f6">其它</a>
+        </div>
+    </div>
+    <div class="main_content">
+        <div class="second_content_left nav-1" id="f1">
+            <img src="/static/img/书籍.png">
+            <a class="btn btn-link more_goods"  href="/shop/book_list/" >更多</a>
+            <div class="third_content">
+                {% for book in book_list %}
+                <div class="goods">
+                    <img src="/static/{{ book.picture }}" >
+                </div>
+                <div class="describe">
+                    <img src="/static/img/箭头.png" >
+                    <a href="/shop/details/{{ book.id }}/">{{ book.title }}</a>
+                    <img src="/static/img/金钱.png" class="rmb">
+                    <span>{{ book.price }}</span>
+                    <p>
+                        {{ book.description }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="second_content_right nav-1" id="f2">   
+            <img src="/static/img/服装.png">
+            <a class="btn btn-link more_goods"  href="/shop/cloth_list/" >更多</a>
+            <div class="third_content">
+                {% for cloth in cloth_list %}
+                <div class="goods">
+                    <img src="/static/{{ cloth.picture }}" >
+                </div>
+                <div class="describe">
+                    <img src="/static/img/箭头.png" >
+                    <a href="/shop/details/{{ cloth.id }}/">{{ cloth.title }}</a>
+                    <img src="/static/img/金钱.png" class="rmb">
+                    <span>{{ cloth.price }}</span>
+                    <p>
+                        {{ cloth.description }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>       
+        <div class="second_content_left nav-1" id="f3">
+            <img src="/static/img/数码.png">
+            <a class="btn btn-link more_goods"  href="/shop/digital_list/" >更多</a>
+            <div class="third_content">
+                {% for digital in digital_list %}
+                <div class="goods">
+                    <img src="/static/{{ digital.picture }}" >
+                </div>
+                <div class="describe">
+                    <img src="/static/img/箭头.png" >
+                    <a href="/shop/details/{{ digital.id }}/">{{ digital.title }}</a>
+                    <img src="/static/img/金钱.png" class="rmb">
+                    <span>{{ digital.price }}</span>
+                    <p>
+                        {{ digital.description }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="second_content_right nav-1" id="f4">
+            <img src="/static/img/游戏.png">
+            <a class="btn btn-link more_goods"  href="/shop/game_list/" >更多</a>
+            <div class="third_content">
+                {% for game in game_list %}
+                <div class="goods">
+                    <img src="/static/{{ game.picture }}" >
+                </div>
+                <div class="describe">
+                    <img src="/static/img/箭头.png" >
+                    <a href="/shop/details/{{ game.id }}/">{{ game.title }}</a>
+                    <img src="/static/img/金钱.png" class="rmb">
+                    <span>{{ game.price }}</span>
+                    <p>
+                        {{ game.description }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="second_content_left nav-1" id="f5">
+            <img src="/static/img/日用百货.png">
+            <a class="btn btn-link more_goods"  href="/shop/daily_list/" >更多</a>
+            <div class="third_content">
+                {% for daily in daily_list %}
+                <div class="goods">
+                    <img src="/static/{{ daily.picture }}" >
+                </div>
+                <div class="describe">
+                    <img src="/static/img/箭头.png" >
+                    <a  href="/shop/details/{{ daily.id }}/">{{ daily.title }}</a>
+                    <img src="/static/img/金钱.png" class="rmb">
+                    <span>{{ daily.price }}</span>
+                    <p>
+                        {{ daily.description }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="second_content_right nav-1" id="f6" style="overflow: hidden;">
+            <img src="/static/img/其它.png">
+            <a class="btn btn-link more_goods"  href="/shop/other_list/">更多</a>
+            <div class="third_content">
+                {% for other in other_list %}
+                <div class="goods">
+                    <img src="/static/{{ other.picture }}" >
+                </div>
+                <div class="describe">
+                    <img src="/static/img/箭头.png" >
+                    <a href="/shop/details/{{ other.id }}/">{{ other.title }}</a>
+                    <img src="/static/img/金钱.png" class="rmb">
+                    <span>{{ other.price }}</span>
+                <p>
+                    {{ other.description }}
+                </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>               
+    </div>
+
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/search.js"></script>
+</body>
+</html>

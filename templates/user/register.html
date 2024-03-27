@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>二手市场注册</title>
+    <link rel="stylesheet" href="/static/css/register.css" >
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" >
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+</head>
+<body>
+    <div class="register">
+        <p class="text-center">注册</p>
+        <form action="/register_handle/" method="post">
+				{% csrf_token %}{{ msg }}
+            <input type="text"  placeholder="用户名" name="username" class="user" id="username" />
+            <span class="error_tip">提示信息</span>
+            <input type="password"  placeholder="密码" name="password"  class="password" id="password"/>
+            <span class="error_tip">提示信息</span>
+            <input type="password"  placeholder="确认密码" name="password2"  class="password" id="password2"/>
+            <span class="error_tip">提示信息</span>
+            <input type="submit" class="btn btn-default" id="register_btn" value="确认注册">
+        </form>
+    </div>
+    
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/register.js"></script>
+</body>
+</html>
