@@ -481,7 +481,7 @@ def add_to_cart(request, pk):
 @loginValid
 def search_result(request):
     search_title = request.GET['search_title']
-    search_goods = ShopInfo.objects.filter(title=search_title)
-    count = ShopInfo.objects.filter(title=search_title).count()
+    search_goods = ShopInfo.objects.filter(title__contains=search_title)
+    count = ShopInfo.objects.filter(title__contains=search_title).count()
     context = {'search_goods': search_goods, 'search_title': search_title, 'count': count}
     return render(request, 'shop/search_result.html', context)

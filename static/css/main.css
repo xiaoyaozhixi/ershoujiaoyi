@@ -88,6 +88,9 @@ body{
 .find>a {
     width: 60px;
     height: 35px;
+    background-image: url("/static/img/search.svg");
+    background-repeat: no-repeat;
+    background-position: center 60%;
 }
 
 .find span {

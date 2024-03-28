@@ -30,7 +30,7 @@
 		<li class="col05">小计</li>
 		<li class="col06">操作</li>
 	</ul>
-	<form action="/order/place_order_more/" >
+	<form action="/order/place_order_more/">
     {% for one in carts %}
 	<ul class="cart_list_td clearfix">
 		<li class="col01"><input type="checkbox" class="goods_check" name="goods_{{ one.goods.id }}_{{ one.id }}"></li>

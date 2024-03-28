@@ -383,6 +383,8 @@ def cart(request):
 
 def delete_cart(request):
     goods_id = request.GET['id']
-    cart2 = CartInfo.objects.filter(goods_id=goods_id)
+    username = request.session.get('username')
+    user = UserInfo.objects.get(username=username)
+    cart2 = CartInfo.objects.filter(buyer=user, goods_id=goods_id)
     cart2.delete()
     return redirect((reverse('user:cart')))
