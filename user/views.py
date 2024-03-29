@@ -299,6 +299,18 @@ def my_order(request):
     return render(request, 'user/my_order.html', context)
 
 
+def delete_order(request):
+    order_id = request.GET['id']
+    order = OrderInfo.objects.get(id=order_id)
+    payorder = PayOrder.objects.get(id=order.order_id_id)
+    goods = order.goods
+    goods.num += order.goods_count
+    goods.save()
+    order.delete()
+    payorder.delete()
+    return redirect((reverse('user:my_order')))
+
+
 @loginValid
 def my_post(request):
     username = request.session.get('username')

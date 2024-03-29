@@ -257,8 +257,8 @@ body{
 }
 
 .main_content .goods {
-    width: 250px;
-    height: 300px;
+    width: 220px;
+    height: 260px;
     border: 2px solid #e4ecf3;
     box-shadow: 1px 2px 3px #f2f6f8;
     border-radius: 5px;
@@ -266,10 +266,10 @@ body{
 }
 
 .main_content .goods img {
-    width: 220px;
-    height: 260px;
-    margin-top: 15px;
-    margin-left: 15px;
+    width: 200px;
+    height: 240px;
+    margin-top: 8px;
+    margin-left: 8px;
 }
 
 .main_content .describe img {
@@ -321,7 +321,7 @@ body{
 
 
 .describe {
-    width: 180px;
+    width: 230px;
     height: 270px;
     float: left;
 }

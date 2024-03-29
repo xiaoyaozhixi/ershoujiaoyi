@@ -52,14 +52,16 @@
             {% for order in user_order %}
             <li>
                 <p class="text">订单编号：{{ order.id }} </p>
-
-                <p class="text">商品表：{{ order.goods }} </p>
-
+                <p class="text">商品名称：{{ order.goods }} </p>
                 <p class="text">商品数量：{{ order.goods_count }} </p>
-
-                <p class="text">总价：{{ order.goods_total_price }} </p>
-   
-                <p class="text">订单状态：{{ order.status }} </p>
+                <p class="text">总价：{{ order.goods_total_price }}</p>
+                <p class="text">订单状态：{{ order.status }} 
+                    {% if order.status == 0 %}
+                    <a href="/delete_order?id={{ order.id }}">取消订单</a>
+                    <a href="/order/AlipayView/?order_id={{ order.id }}">去支付</a>
+                    {% endif %}
+                </p>
+                
             </li>
             {% empty %}
                     <span>目前没有订单</span>

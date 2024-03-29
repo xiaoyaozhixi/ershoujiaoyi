@@ -27,17 +27,18 @@
     <h3 class="common_title">商品列表:</h3>
 	<div class="common_list_con clearfix">
 		<ul class="goods_list_th clearfix">
-			<li class="col01">商品名称</li>
-			<li class="col02">商品价格</li>
-			<li class="col03">数量</li>
-			<li class="col04">小计</li>
+            <li class="col01">商品图片</li>
+			<li class="col02">商品名称</li>
+			<li class="col03">商品价格</li>
+			<li class="col04">数量</li>
+			<li class="col05">小计</li>
 		</ul>
         {{ err_msg }}
     {% for one in payorder.orderinfo_set.all %}
 		<ul class="goods_list_td clearfix">
 			<li class="col01">1</li>
 			<li class="col02"><img src="/static/{{ one.goods.picture }}"></li>
-			<li class="col03">{{ one.goods.goods_name }}</li>
+			<li class="col03">{{ one.goods.title }}</li>
 			<li class="col04">{{ one.goods_price }}元</li>
 			<li class="col05">{{ one.goods_count }}</li>
 			<li class="col06">{{ one.goods_total_price }}元</li>

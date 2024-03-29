@@ -13,8 +13,7 @@ from user.models import *
 def place_order_more(request):
     data = request.GET
     username = request.session.get('username')
-    for _ in data:
-        print(data)
+    address = UserInfo.objects.get(username=username).address
     request_data = []
     for key, value in data.items():
         if key.startswith('goods'):
@@ -57,36 +56,6 @@ def place_order_more(request):
             goods.save()
         payorder.order_total = order_total
         payorder.save()
-    return render(request, 'user/order.html', locals())
-
-
-def place_order(request):
-    goods_id = request.GET.get('goods_id')
-    goods_count = request.GET.get('goods_count')
-    username = request.session.get('username')
-    address = UserInfo.objects.get(username=username).address
-    if goods_id:
-        goods_id = int(goods_id)
-        goods = ShopInfo.objects.get(id=goods_id)
-        payorder = PayOrder()
-        order_number = str(time.time()).replace('.', '')
-        payorder.order_number = order_number
-        payorder.order_status = 0
-        payorder.order_total = goods.price
-        payorder.order_user = UserInfo.objects.get(username=username)
-        payorder.save()
-        orderinfo = OrderInfo()
-        orderinfo.order_id = payorder.id
-        orderinfo.goods = goods
-        orderinfo.goods_count = goods_count
-        orderinfo.goods_price = goods.price
-        orderinfo.goods_total_price = goods.price
-        orderinfo.store_id = goods.owner
-        orderinfo.save()
-        total_count = 0
-        all_infos = payorder.orderinfo_set.all()
-        for one in all_infos:
-            total_count += one.goods_count
     return render(request, 'user/order.html', locals())
 
 

@@ -23,6 +23,7 @@ urlpatterns = [
     path('remove_clt_goods/<int:pk>/', views.remove_clt_goods),
     path('change_password/', views.change_password),
     path('my_post/', views.my_post),
-    path('my_order/', views.my_order),
+    path('my_order/', views.my_order, name='my_order'),
+    path('delete_order/', views.delete_order),
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.MEDIA_URL)

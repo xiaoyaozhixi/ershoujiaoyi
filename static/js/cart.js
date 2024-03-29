@@ -33,7 +33,7 @@ function add() {
                 // 数量
                 var num =parseInt($(this).parents('.cart_list_td').find('.num_show').val()) ;
                 // 小计
-                var total =parseFloat($(this).parents('.cart_list_td').find('.col07').text());
+                var total =parseFloat($(this).parents('.cart_list_td').find('.col05').text());
                 dic.num+=num;
                 dic.total+=total;
             }
@@ -42,4 +42,3 @@ function add() {
     $('#total_mount').text(dic.total);
     $('#total_num').text(dic.num);
 }
-
