@@ -66,26 +66,26 @@ body{
     position: relative;
 }
 
-/* ---------------------find--------------------- */
-.find {
+/* ---------------------search--------------------- */
+.search {
     width: 640px;
     height: 80px;
 }
 
-.find input {
+.search input {
     width: 400px;
     margin: 0 auto;
     margin-left: 30px;
     display: inline-block;
 }
 
-.find button {
+.search button {
     display: inline-block;
     width: 100px;
     height: 35px;
 }
 
-.find>a {
+.search>a {
     width: 60px;
     height: 35px;
     background-image: url("/static/img/search.svg");
@@ -93,13 +93,13 @@ body{
     background-position: center 60%;
 }
 
-.find span {
+.search span {
     position: relative;
     top: -4px;
 }
 
 
-.find>button>a {
+.search>button>a {
     color: white;
     position: relative;
     top: -10px;

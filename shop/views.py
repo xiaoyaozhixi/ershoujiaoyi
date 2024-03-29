@@ -481,7 +481,60 @@ def add_to_cart(request, pk):
 @loginValid
 def search_result(request):
     search_title = request.GET['search_title']
-    search_goods = ShopInfo.objects.filter(title__contains=search_title)
+    page = int(request.GET.get('page', 1))
+    page_size = 1  # 每一页记录个数
+    start = (page - 1) * page_size
+    end = page * page_size
+    search_goods = ShopInfo.objects.filter(title__contains=search_title)[start:end]
     count = ShopInfo.objects.filter(title__contains=search_title).count()
-    context = {'search_goods': search_goods, 'search_title': search_title, 'count': count}
+    page_str_list = []
+    plus = 5  # 当前页面 前后几页的数值
+    total_page = math.ceil(count / 4)
+    if total_page < 2 * plus + 1:  # 页面过少，起始和结束页码改为1和总页面数
+        start_page = 1
+        end_page = total_page
+    elif page < 1 + plus:
+        start_page = 1
+        end_page = page + plus
+    elif page + plus > total_page:
+        start_page = page - plus
+        end_page = total_page
+    else:
+        start_page = page - plus  # 当前页面
+        end_page = page + plus
+    # 首页
+    page_str_list.append('<li><a href="?page={}">首页</a></li>'.format(1))
+    # 上一页
+    if page <= 1:
+        prev = '<li><a href="?page={}">上一页</a></li>'.format(1)
+    else:
+        prev = '<li><a href="?page={}">上一页</a></li>'.format(page - 1)
+    page_str_list.append(prev)
+    for i in range(start_page, end_page + 1):
+        if i == page:  # 如果是当前所在页面，添加激活样式
+            ele = '<li class="active"><a href="?page={}">{}</a></li>'.format(i, i)  # 生成多行页码li
+        else:
+            ele = '<li><a href="?page={}">{}</a></li>'.format(i, i)  # 生成多行页码li
+        page_str_list.append(ele)
+    # 下一页
+    if page < total_page:  # 判断是否超过总页数
+        next = '<li><a href="?page={}">下一页</a></li>'.format(page + 1)
+    else:
+        next = '<li><a href="?page={}">下一页</a></li>'.format(total_page)
+    page_str_list.append(next)
+    # 尾页
+    page_str_list.append('<li><a href="?page={}">尾页</a></li>'.format(total_page))
+    # 分页搜索框
+    search_string = '''
+                    <form method="get">
+                    <div class="input-group" style="width:200px">
+                    <input type="text" name="page" class="form-control" value="" placeholder="页码">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">跳转</button></span>
+                    </div>
+                    </form>
+                    '''
+    page_str_list.append(search_string)
+    page_string = mark_safe("".join(page_str_list))
+    context = {'search_goods': search_goods, 'search_title': search_title, 'count': count, 'page_string': page_string}
     return render(request, 'shop/search_result.html', context)

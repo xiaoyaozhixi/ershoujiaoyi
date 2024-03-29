@@ -23,9 +23,9 @@
     </div>
     <div class="title">
         <div class="second_title">
-            <div class="find">
-                <input type="text" class="form-control" id="find" >
-                <a type="button" class="btn btn-warning" id="find-button" href="javascript:void(0);" onclick="go_search()">
+            <div class="search">
+                <input type="text" class="form-control" id="search" >
+                <a type="button" class="btn btn-warning" id="search-button" href="javascript:void(0);" onclick="go_search()">
                 </a>
                 <button type="button" class="btn btn-warning"><a href="/shop/release_goods/">发布商品</a></button>
             </div>
@@ -48,9 +48,11 @@
              {% endfor %}
         </div>
         {%endif%}
-        <hr>
-        <button class="l_btn btn btn-default">上一页</button>
-        <button class="r_btn btn btn-default">下一页</button>
+        <div class="clearfix">
+            <ul class="pagination">
+                {{ page_string }}
+            </ul>
+        </div>
     </div>
 
     <script src="/static/js/jquery-3.3.1.min.js"></script>
